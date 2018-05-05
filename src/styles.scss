@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+$border-width: 3px;
+$h1-font-size: 8rem;
+$fa-font-path: '~font-awesome/fonts';
+
+@import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $gray-600;
+}
+
+.btn-group > .btn.order-1 {
+  border-top-left-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.btn-group > .btn.order-2 {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.ngb-tp {
+  justify-content: center;
+  .ngb-tp-hour, div:nth-child(2) {
+    display: none !important;
+  }
+  .form-control, .chevron {
+    font-size: 2rem
+  }
+}

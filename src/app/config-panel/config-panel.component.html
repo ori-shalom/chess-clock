@@ -1,0 +1,12 @@
+
+  <div class="modal-body justify-content-center">
+    <ngb-timepicker [(ngModel)]="time" [seconds]="true"></ngb-timepicker>
+  </div>
+  <div class="modal-footer justify-content-center">
+    <button type="button" class="btn btn-danger" (click)="activeModal.dismiss()">
+      <i class="fa fa-fw fa-2x fa-times"></i>
+    </button>
+    <button type="button" class="btn btn-primary" (click)="activeModal.close(time)">
+        <i class="fa fa-fw fa-2x fa-check"></i>
+    </button>
+  </div>
