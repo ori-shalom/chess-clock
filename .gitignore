@@ -8,6 +8,8 @@
 
 # dependencies
 /node_modules
+/platforms/browser/cordova/node_modules
+/chess-clock-web/node_modules
 
 # IDEs and editors
 /.idea
