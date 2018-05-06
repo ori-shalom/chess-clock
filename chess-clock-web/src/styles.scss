@@ -2,10 +2,11 @@
 
 $border-width: 3px;
 $h1-font-size: 8rem;
-$fa-font-path: '~font-awesome/fonts';
+$fa-font-path: '~@fortawesome/fontawesome-free-webfonts/webfonts';
 
 @import '~bootstrap/scss/bootstrap';
-@import '~font-awesome/scss/font-awesome';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-solid';
 
 html, body {
   height: 100%;
