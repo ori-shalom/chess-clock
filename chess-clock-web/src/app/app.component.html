@@ -5,8 +5,8 @@
         <i class="fas fa-fw fa-2x" [ngClass]="{'fa-pause': !paused, 'fa-play': paused}"></i>
       </button>
       <button type="button" class="btn btn-danger" (click)="switchSides()"><i class="fas fa-fw fa-2x fa-exchange-alt"></i></button>
-      <button type="button" class="btn btn-danger" (click)="reset()"><i class="fas fa-fw fa-2x fa-redo-alt"></i></button>
-      <button type="button" class="btn btn-danger" (click)="open()"><i class="fas fa-fw fa-2x fa-cog"></i></button>
+      <button type="button" class="btn btn-danger" (click)="resetGame()"><i class="fas fa-fw fa-2x fa-redo-alt"></i></button>
+      <button type="button" class="btn btn-danger" (click)="openConfigPanel()"><i class="fas fa-fw fa-2x fa-cog"></i></button>
     </div>
   </div>
   <div class="d-flex flex-grow-1 w-100 btn-group justify-content-center">
@@ -15,7 +15,7 @@
         [disabled]="paused || turn !== 'white'"
         (click)="changeTurn()">
       <div class="d-flex h-100 align-items-center justify-content-center">
-        <h1 class="align-middle text-center">{{white.time | date:'m:ss'}}</h1>
+        <h1 class="align-middle text-center" [ngClass]="{'text-danger': white.last30seconds}">{{white.time | date:'m:ss'}}</h1>
       </div>
     </button>
     <button class="col-6 btn btn-dark"
@@ -23,7 +23,7 @@
         [disabled]="paused || turn !== 'black'"
         (click)="changeTurn()">
         <div class="d-flex h-100 align-items-center justify-content-center">
-          <h1 class="align-middle text-center">{{black.time | date:'m:ss'}}</h1>
+          <h1 class="align-middle text-center" [ngClass]="{'text-danger': black.last30seconds}">{{black.time | date:'m:ss'}}</h1>
         </div>
     </button>
   </div>
