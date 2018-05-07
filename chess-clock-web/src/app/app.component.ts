@@ -3,6 +3,7 @@ import { NgbModal, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigPanelComponent } from './config-panel/config-panel.component';
 import { Color, Side } from './models/enums.module';
 import { Player } from './models/player.model';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,7 @@ export class AppComponent {
   }
 
   constructor(private modalService: NgbModal) {
-    this.gameOverAudio = new Audio('../assets/sounds/alarm2.mp3');
+    this.gameOverAudio = new Audio(`${environment.assetsPath}/sounds/alarm2.mp3`);
     this.gameOverAudio.load();
     this.initGame();
   }
